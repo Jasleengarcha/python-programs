@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block page_content %}
+<h1>indexpage content</h1>
+
+<form method="post">
+    {% csrf_token %}
+    <label for="fname">First name:</label><br>
+    <input type="text" id="fname" name="fname"><br>
+    <label for="lname">Last name:</label><br>
+    <input type="text" id="lname" name="lname">
+    <input type="submit">
+    <p>username={{first_name}}</p>
+    <p>lastname={{last_name}}</p>
+</form>
+{% endblock %}
